@@ -3,17 +3,17 @@
 
 ### Install Docker/Docker Compose
 
-sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
-systemctl start docker
-sudo usermod -aG docker $USER
+sudo yum install -y yum-utils   
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo   
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y   
+systemctl start docker   
+sudo usermod -aG docker $USER   
 
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
-sudo chmod +x /usr/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose   
+sudo chmod +x /usr/bin/docker-compose   
 
 ### Install PMM server 
-(https://docs.percona.com/percona-monitoring-and-management/setting-up/server/index.html)
+(https://docs.percona.com/percona-monitoring-and-management/setting-up/server/index.html)   
 
 Run docker-compose up -d
 
