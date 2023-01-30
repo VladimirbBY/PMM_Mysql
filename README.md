@@ -37,7 +37,7 @@ pmm-agent setup --config-file=/usr/local/percona/pmm2/config/pmm-agent.yaml --se
 
 Run the agent.
 
-pmm-agent --config-file=${PMM_DIR}/config/pmm-agent.yaml
+pmm-agent --config-file=${PMM_DIR}/config/pmm-agent.yaml   
 
 Open a new terminal and check.
 
