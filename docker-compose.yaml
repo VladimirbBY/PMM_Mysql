@@ -1,0 +1,38 @@
+version: '2'
+# version 2 of docker-compose is not "old" version, it's the actual version,
+# see below for explanation:
+# https://stackoverflow.com/a/53636006/961092
+services:
+    # Percona Monitoring and Management server
+    pmm-data:
+        image: percona/pmm-server:2.26
+        container_name: pmm-data
+        hostname: pmm-data
+        volumes:
+            - /srv
+            - /var/log/pmm:/srv/logs
+        entrypoint: /bin/true
+
+    pmm-server:
+        image: percona/pmm-server:2.26
+        hostname: pmm-server
+        container_name: pmm-server
+        restart: always
+
+
+        # logging settings limit used disk space
+        logging:
+            driver: json-file
+            options:
+                max-size: "10m"
+                max-file: "5"
+
+        ports:
+            - "443:443"
+        # uncomment expose section in order to proxy requests through another container instead of
+        # accessing the container directly
+        # expose:
+        #     - "443"
+
+        volumes_from:
+            - pmm-data
