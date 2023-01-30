@@ -71,3 +71,7 @@ Select MySQL -- Add a remote instance.
 Enter or select values for the fields.   
 
 Click Add service   
+
+### Network
+
+(https://docs.percona.com/percona-monitoring-and-management/setting-up/server/network.html)
