@@ -1,3 +1,4 @@
+## Install PMM server
 ### Clone Repo
 
 ### Install Docker/Docker Compose
@@ -16,6 +17,7 @@ sudo chmod +x /usr/bin/docker-compose
 
 Run docker-compose up -d
 
+## Install PMM Client
 ### Set up PMM Client 
 (https://docs.percona.com/percona-monitoring-and-management/setting-up/client/index.html)
 
@@ -53,7 +55,7 @@ pmm-admin status
 pmm-admin config --server-insecure-tls --server-url=https://admin:admin@X.X.X.X:443
 
 
-### Setup MySQl client 
+## Setup MySQl client 
 (https://docs.percona.com/percona-monitoring-and-management/setting-up/client/mysql.html)
 
 On MySQL 5.7
