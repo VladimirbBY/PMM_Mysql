@@ -1,3 +1,5 @@
+### Clone Repo
+
 ### Install Docker/Docker Compose
 
 sudo yum install -y yum-utils
@@ -9,10 +11,13 @@ sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 sudo chmod +x /usr/bin/docker-compose
 
-### Install PMM server (https://docs.percona.com/percona-monitoring-and-management/setting-up/server/index.html)
+### Install PMM server 
+(https://docs.percona.com/percona-monitoring-and-management/setting-up/server/index.html)
+
 Run docker-compose up -d
 
-### Set up PMM Client (https://docs.percona.com/percona-monitoring-and-management/setting-up/client/index.html)
+### Set up PMM Client 
+(https://docs.percona.com/percona-monitoring-and-management/setting-up/client/index.html)
 
 Download the PMM Client package:
 
@@ -48,7 +53,8 @@ pmm-admin status
 pmm-admin config --server-insecure-tls --server-url=https://admin:admin@X.X.X.X:443
 
 
-### Setup MySQl client (https://docs.percona.com/percona-monitoring-and-management/setting-up/client/mysql.html)
+### Setup MySQl client 
+(https://docs.percona.com/percona-monitoring-and-management/setting-up/client/mysql.html)
 
 On MySQL 5.7
 
